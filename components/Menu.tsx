@@ -1,6 +1,7 @@
 "use client";
 import {
   BookUser,
+  ChevronRight,
   GalleryVerticalEnd,
   Home,
   User2,
@@ -65,7 +66,7 @@ const Menu = () => {
                 </div>
                 {/* Active indicator hidden on smaller screens */}
                 {isActive && (
-                  <div className="w-1 h-6 bg-[#7F5AF0] rounded-full hidden lg:block"></div>
+                  <ChevronRight className="w-5 h-5 text-[#7F5AF0]  rounded-full hidden lg:block" />
                 )}
               </Link>
             </li>
