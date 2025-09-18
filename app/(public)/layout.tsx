@@ -2,7 +2,6 @@ import Menu from "@/components/Menu";
 import { Separator } from "@/components/ui/separator";
 import { aboutInfor } from "@/lib/raw-data";
 import { getAboutInfo } from "@/lib/sanity.queries";
-import { Moon, Sun } from "lucide-react";
 import Image from "next/image";
 
 export default async function PublicLayout({

@@ -1,5 +1,4 @@
 import CareerCard from "@/components/CareerCard";
-import { aboutInfor, careerHistory } from "@/lib/raw-data";
 import { getAboutInfo, getCareer } from "@/lib/sanity.queries";
 import { About, Career } from "@/type";
 import { Briefcase } from "lucide-react";

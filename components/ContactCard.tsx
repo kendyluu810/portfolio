@@ -1,5 +1,4 @@
 import { Mail, Github, Linkedin, Instagram, Globe } from "lucide-react";
-import { JSX } from "react";
 
 type ContactCardProps = {
   platform?: string;

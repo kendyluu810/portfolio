@@ -1,7 +1,6 @@
 "use client";
 import {
   BookUser,
-  ChevronRight,
   GalleryVerticalEnd,
   Home,
   User2,

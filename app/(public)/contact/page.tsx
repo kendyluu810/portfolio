@@ -1,5 +1,4 @@
 import ContactCard from "@/components/ContactCard";
-import { contactLinks } from "@/lib/raw-data";
 import { getContact } from "@/lib/sanity.queries";
 
 export default async function ContactPage() {

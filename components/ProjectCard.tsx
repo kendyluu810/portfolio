@@ -1,5 +1,5 @@
 import { Project } from "@/type";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function ProjectCard({ project }: { project: Project }) {

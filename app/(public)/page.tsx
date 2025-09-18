@@ -1,7 +1,6 @@
 import FeaturedCard from "@/components/FeaturedCard";
 import SkillIcon from "@/components/SkillIcon";
 import { Separator } from "@/components/ui/separator";
-import { aboutInfor, skillItem } from "@/lib/raw-data";
 import { getAboutInfo, getProjects, getSkills } from "@/lib/sanity.queries";
 import { About, Project, Skill } from "@/type";
 import { Code2, LayoutPanelLeftIcon } from "lucide-react";
