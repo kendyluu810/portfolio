@@ -17,6 +17,9 @@ export default async function ProjectCard({ project }: { project: Project }) {
         </div>
         <div className="p-6">
           <h3 className="text-xl font-bold text-[#FFFFFE]">{project.title}</h3>
+          <p className="mt-2 text-base uppercase text-[#FFFFFE]">
+            {project.typeOfProject?.join(", ")}
+          </p>
           <p className="mt-2 text-sm text-[#94A1B2]">
             {project.shortDescription}
           </p>

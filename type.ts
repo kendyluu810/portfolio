@@ -41,6 +41,7 @@ export interface Project {
   };
   imageUrl: string;
   shortDescription: string;
+  typeOfProject?: string[];
   techStack: Tech[];
 }
 

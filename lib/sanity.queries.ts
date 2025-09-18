@@ -50,6 +50,7 @@ export async function getProjects() {
     slug,
     shortDescription,
     "imageUrl": image.asset->url,
+    typeOfProject,
     techStack[]->{
       title,
       "logoUrl": image.asset->url
