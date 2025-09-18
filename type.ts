@@ -1,11 +1,11 @@
-import { Image as SanityImage } from "sanity";
+import { PortableTextBlock, Image as SanityImage } from "sanity";
 
 // Định nghĩa cho About
 export interface About {
   name: string;
   location: string;
   shortIntro: string;
-  intro: string; 
+  intro: PortableTextBlock[]; // Sửa từ string thành PortableTextBlock[]
   imageUrl: string;
 }
 
@@ -53,7 +53,7 @@ export interface GalleryImage {
 // Định nghĩa cho Section trong chi tiết dự án
 export interface ProjectSection {
   title: string;
-  content: any[]; 
+  content: any[];
 }
 
 // Định nghĩa cho Project Detail
@@ -80,4 +80,3 @@ export interface Contact {
   phone: string;
   socials: SocialLink[];
 }
-

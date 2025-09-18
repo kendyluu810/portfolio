@@ -9,7 +9,12 @@ export const about = defineType({
     defineField({ name: "nickname", type: "string", title: "Nickname" }),
     defineField({ name: "location", type: "string", title: "Location" }),
     defineField({ name: "shortIntro", type: "text", title: "Short Intro" }),
-    defineField({ name: "intro", type: "text", title: "Intro" }),
+    defineField({
+      name: "intro",
+      type: "array",
+      of: [{ type: "block" }],
+      title: "Intro",
+    }),
     defineField({
       name: "image",
       type: "image",

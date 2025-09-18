@@ -2,6 +2,7 @@ import CareerCard from "@/components/CareerCard";
 import { getAboutInfo, getCareer } from "@/lib/sanity.queries";
 import { About, Career } from "@/type";
 import { Briefcase } from "lucide-react";
+import { PortableText } from "@portabletext/react";
 
 export default async function AboutPage() {
   const about: About = await getAboutInfo();
@@ -15,7 +16,7 @@ export default async function AboutPage() {
           A brief introduction to who I am
         </p>
         <div className="mt-6 text-base text-[#94A1B2] leading-relaxed space-y-4 max-w-4xl">
-          <p>{about.intro}</p>
+          {about?.intro && <PortableText value={about.intro} />}
         </div>
       </section>
 
