@@ -45,10 +45,17 @@ export interface Project {
   techStack: Tech[];
 }
 
-// Định nghĩa cho hình ảnh trong Gallery
+// Thêm interface cho kích thước ảnh
+interface ImageDimensions {
+  width: number;
+  height: number;
+}
+
+// Cập nhật interface GalleryImage
 export interface GalleryImage {
   url: string;
-  alt: string;
+  alt?: string;
+  dimensions: ImageDimensions; // <-- THÊM DÒNG NÀY
 }
 
 // Định nghĩa cho Section trong chi tiết dự án
@@ -62,7 +69,7 @@ export interface ProjectDetail extends Project {
   details: {
     shortDesc: string;
     sections: ProjectSection[];
-    gallery: GalleryImage[];
+    gallery?: GalleryImage[]; // <-- Sửa ở đây
   }[];
   sourceCodeUrl?: string;
   liveDemoUrl?: string;

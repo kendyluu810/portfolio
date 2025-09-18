@@ -82,7 +82,8 @@ export const projectDetailQuery = groq`
       },
       gallery[]{
         "url": asset->url,
-        alt
+        alt,
+        "dimensions": asset->metadata.dimensions
       }
     }
   }

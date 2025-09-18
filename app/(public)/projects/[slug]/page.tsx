@@ -86,25 +86,23 @@ export default async function ProjectDetailPage({ params }: Props) {
         </div>
 
         {details?.gallery && details.gallery.length > 0 && (
-          <div className="mt-8">
-            <div className="max-w-6xl mx-auto ">
-              {details.gallery.map((image, index) => (
-                <div
-                  key={index}
-                  className="relative aspect-video rounded-lg overflow-hidden"
-                >
-                  <Image
-                    src={image.url}
-                    alt={image.alt || "Gallery image"}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-              ))}
-            </div>
+          <div className="mt-8 space-y-4">
+            {details.gallery.map((image, index) => (
+              <div
+                key={index}
+                className="rounded-lg overflow-hidden space-y-8 border border-gray-800/50"
+              >
+                <Image
+                  src={image.url}
+                  alt={image.alt || "Gallery image"}
+                  width={image.dimensions.width}
+                  height={image.dimensions.height}
+                  className="w-full h-auto" // Để ảnh tự điều chỉnh chiều cao
+                />
+              </div>
+            ))}
           </div>
         )}
-
         {details?.sections?.map((section, index) => (
           <div key={index} className="mt-8">
             <h2 className="text-2xl font-bold text-[#FFFFFE]">
