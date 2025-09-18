@@ -5,8 +5,6 @@ import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import TechBadge from "./TechBadge";
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
-import { projects } from "@/lib/raw-data";
-import { getAboutInfo } from "@/lib/sanity.queries";
 import { About, Project } from "@/type";
 
 interface FeaturedCardProps {
@@ -14,11 +12,11 @@ interface FeaturedCardProps {
   projects: Project[];
 }
 
-export default async function FeaturedCard({
+export default function FeaturedCard({
   about,
   projects,
 }: FeaturedCardProps) {
-  const plugin = React.useRef(
+  const plugin1 = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: false })
   );
   const plugin2 = React.useRef(
@@ -92,10 +90,10 @@ export default async function FeaturedCard({
         </p>
         <div className="mt-4 space-y-3">
           <Carousel
-            plugins={[plugin.current]}
+            plugins={[plugin1.current]}
             className="w-full"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
+            onMouseEnter={plugin1.current.stop}
+            onMouseLeave={plugin1.current.reset}
           >
             <CarouselContent>
               <CarouselItem>
@@ -112,8 +110,8 @@ export default async function FeaturedCard({
           <Carousel
             plugins={[plugin2.current]}
             className="w-full"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
+            onMouseEnter={plugin2.current.stop}
+            onMouseLeave={plugin2.current.reset}
           >
             <CarouselContent>
               <CarouselItem>

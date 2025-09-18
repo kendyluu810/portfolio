@@ -37,25 +37,7 @@ export default async function PublicLayout({
             @{aboutInfor.nickname}
           </p>
         </div>
-
-        {/* Toggles hidden on smaller screens */}
-        <div className="mt-6 hidden lg:flex items-center justify-center w-full px-4 gap-4">
-          <ul className="flex gap-2 text-xs">
-            <li className="px-3 py-1 rounded-full bg-[#7F5AF0] text-white font-semibold cursor-pointer">
-              EN
-            </li>
-            <li className="px-3 py-1 rounded-full bg-gray-700 text-[#94A1B2] font-semibold cursor-pointer">
-              VI
-            </li>
-          </ul>
-          <div className="p-1 rounded-full bg-gray-700 flex items-center gap-2">
-            <div className="p-1 rounded-full bg-gray-800">
-              <Sun className="w-4 h-4 text-[#94A1B2] hover:text-[#7F5AF0] cursor-pointer" />
-            </div>
-            <Moon className="w-4 h-4 text-[#94A1B2] hover:text-[#7F5AF0] cursor-pointer mr-1" />
-          </div>
-        </div>
-
+        
         <Separator className="my-6 bg-gray-700" />
 
         <div className="w-full px-4 lg:px-6">

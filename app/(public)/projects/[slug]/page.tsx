@@ -8,11 +8,11 @@ import { PortableText } from "@portabletext/react";
 import { ProjectDetail } from "@/type";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function ProjectDetailPage({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
   const project: ProjectDetail = await client.fetch(projectDetailQuery, {
     slug,
   });
