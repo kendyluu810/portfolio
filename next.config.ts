@@ -17,6 +17,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  webpack: (config) => {
+    return config; // ép dùng Webpack
+  },
 };
 
 export default nextConfig;
