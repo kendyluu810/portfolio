@@ -26,6 +26,11 @@ export default async function ContactPage() {
           Find me on social media
         </h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Gmail Card - Full Width */}
+          <div className="md:col-span-2">
+            <ContactCard platform="Gmail" url={`${contact.email}`} />
+          </div>
+
           {/* Other Socials */}
           {contact.socials?.map((social: Social, index: number) => (
             <ContactCard
